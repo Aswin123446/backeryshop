@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+   <title>Bakery</title>
+</head>
+
+<body>
+   <div class="about">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-5">
+               <div class="about_text">
+                  <h3 class="key">{{key1.name}}</h3>
+                  {% for i in van %}
+                  <img id="src-mi" src="{{i.image.url}}" width="180">
+                  {% endfor %}
+
+                  <p id="about-text1">{{key1.desc}} </p>
+
+               </div>
+            </div>
+         </div>
+         <br><br>
+         <center>
+            <h1><b>Comment-Box</b></h1>
+            <div class="comment-box">
+
+               {% if key1.comments.all %}
+               {% for cmd in key1.comments.all %}
+               <p>{{cmd.name}}&nbsp<b>{{cmd.msg}}&nbsp</b><small>{{cmd.date}}</small></p>
+               {% endfor %}
+               {% else %}
+               <h2> There is no comment here</h2>
+               {% endif %}
+         </center>
+      </div>
+      <center>
+         <div class="commenting-box">
+            <form action="{% url 'comment' %}" method='post'>
+               {% csrf_token %}
+               <textarea name="msg" placeholder="Enter here...."> </textarea>
+               <input type="hidden" name="pro" value="{{key1.id}}">
+               <input type="hidden" name="user" value="{{user.username}}">
+               <button type="submit"> send </button>
+            </form>
+         </div>
+      </center>
+</body>
+
+</html>

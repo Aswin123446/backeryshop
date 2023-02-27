@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+body{
+   background-color: antiquewhite;
+}
+
+.comment-box{
+    width:900px;
+    height:500px;
+    background-color: whitesmoke;
+    border:3px solid rgba(24, 54,97,);
+    margin-top: 10px;
+    overflow: auto;
+    border-radius: 5px;
+ }
+
+ .comment-box p{
+    background-color:rgb(243, 13, 174);
+    padding:10px;
+    margin:10px;
+    border-radius:5px;
+    padding-left:40px;
+    color:whitesmoke;
+ }
+
+ .commenting-box{
+    width:900px;
+    height: 140px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding:10px;
+    border:3px solid rgba(243,162,13);
+ }
+
+ 
+
+ .commenting-box textarea{
+    width:700px;
+    height: 130px;
+    border:3px solid rgba(243, 162,13,);
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+ }
+
+ .commenting-box button{
+    width:800px;
+    height: 150px;
+    border:3px solid rgba(243, 162,13,);
+    font-size: 17px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+ }
+
+ .commenting-box button{
+    width:90px;
+    height: 40px;
+    border:3px solid rgb(8, 224, 8);
+    border-radius: 20px;
+    background-color: rgb(31, 236, 12);
+ }
+ .commenting-box button:hover{
+   box-shadow: 2px 8px 012px rgb(4, 252, 4);
+   
+ 
+
+}
+.commenting-box button:active{
+   background-color: green;
+   transform: translateX(5px);
+  
+  
+}
+ .row  {
+   width: 350px;
+   height: 350px;
+   padding: 5px;
+   border: 3px solid rgb(236, 43, 43);
+   border-radius: 20px;
+
+ }
+ #src-mi{
+   margin-left: 55px;
+   border-radius: 50px;
+
+   
+ }
+ .key{
+   margin-left: 65px;
+   
+ }

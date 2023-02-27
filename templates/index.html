@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>shop</title>
+</head>
+
+<body>
+    
+    <div class="slider">
+        <div class="images">
+            <input type="radio" name="slide" id="img1" checked>
+            <input type="radio" name="slide" id="img2" checked>
+            <input type="radio" name="slide" id="img3" checked>
+            <input type="radio" name="slide" id="img4" checked>
+
+            <img src="{% static 'images/backery1.jpg' %}" class="m1" alt="img1" />
+            <img src="{% static 'images/backery2.jpg' %}" class="m2" alt="img2" />
+            <img src="{% static 'images/backery3.jpg' %}" class="m3" alt="img3" />
+            <img src="{% static 'images/backery4.jpg' %}" class="m4" alt="img4" />
+        </div>
+        <div class="dots">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+            <label for="img4"></label>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="product_main">
+            {% for i in pro %}
+            
+                <div class="image">
+                    <img id="cls" src="{{i.image.url}}" alt="#" />
+                    <h3 class="yappo">{{i.name}}</h3>
+                    <a class="read_more" href="product/?id={{i.id}}">view Details</a>
+                </div>
+            
+            {% endfor %}
+        </div>
+
+
+
+
+
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
